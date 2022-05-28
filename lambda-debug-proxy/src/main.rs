@@ -118,7 +118,7 @@ async fn my_handler(event: LambdaEvent<Value>) -> Result<Value, Error> {
 /// or returns as-is if it's not encoded/compressed.
 fn decode_maybe_binary(body: String) -> String {
     // check for presence of { at the beginning of the doc to determine if it's JSON or Base58
-    if body.len() == 0 || body.trim_start().starts_with("{") {
+    if body.len() == 0 || body.trim_start().starts_with("{") || body.trim() == "null" {
         // looks like JSON - return as-is
         return body;
     }

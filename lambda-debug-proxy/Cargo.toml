@@ -20,6 +20,6 @@ bs58 = "0.4"
 tracing = { version = "0.1", features = ["log"] }
 tracing-subscriber = "0.3"
 log = "0.4"
-lambda_runtime = { git = "https://github.com/awslabs/aws-lambda-rust-runtime.git" }
+lambda_runtime = "0.5.1"
 rusoto_sqs = { version = "0.47", features = ["rustls"], default-features = false }
 rusoto_core = { version = "0.47", features = ["rustls"], default-features = false }
